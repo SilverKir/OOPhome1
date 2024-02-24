@@ -1,6 +1,7 @@
-package seminar.sem3;
+package seminar.sem3.service;
 
-import java.io.EOFException;
+import seminar.sem3.data.Student;
+
 import java.util.Iterator;
 import java.util.List;
 

@@ -1,4 +1,6 @@
-package seminar.sem3;
+package seminar.sem4;
+
+import seminar.sem3.data.Student;
 
 import java.util.Comparator;
 

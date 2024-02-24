@@ -1,6 +1,8 @@
-package seminar.sem3;
+package seminar.sem3.service;
 
-import java.util.ArrayList;
+import seminar.sem3.data.Steam;
+import seminar.sem3.data.StudyGroup;
+
 import java.util.List;
 
 public class SteamService {

@@ -1,5 +1,13 @@
 package seminar.sem3;
 
+import seminar.sem3.data.Steam;
+import seminar.sem3.data.Student;
+import seminar.sem3.data.StudyGroup;
+import seminar.sem3.data.Teacher;
+import seminar.sem3.service.*;
+import seminar.sem3.view.StudentView;
+import seminar.sem3.view.TeacherView;
+
 import java.util.*;
 
 import static java.util.Arrays.*;
@@ -93,7 +101,22 @@ public class Main {
                 groupService.getSortedStudentGroupByFIO();
             }
         }
-        steamService.soutSteamList(steamService.SortSteamByCountGroup());
+
+        System.out.println("----------Seminar 4 ----------");
+        StudentView studentView=new StudentView();
+        studentView.sendOnConsole(studentList);
+
+        System.out.println("----------Home4 ----------");
+        List<Teacher> teacherList=new ArrayList<>(Arrays.asList(
+                new Teacher("Сергей","Бобров","Павлович", "Поэт"),
+                new Teacher("Арсений","Альвинг","","Поэт"),
+                new Teacher("Эдуард","Багрицкий")
+                ));
+        TeacherView tv =new TeacherView();
+        tv.sendOnConsole(teacherList);
+        System.out.println("----------Home4 Sorted----------");
+        TeacherService ts =new TeacherService(teacherList);
+        tv.sendOnConsole(ts.SortTeacherByName());
 
     }
 }

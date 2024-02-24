@@ -1,4 +1,6 @@
-package seminar.sem3;
+package seminar.sem3.service;
+
+import seminar.sem3.data.StudyGroup;
 
 import java.util.Comparator;
 

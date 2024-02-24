@@ -1,4 +1,6 @@
-package seminar.sem3;
+package seminar.sem3.data;
+
+import seminar.sem3.service.SteamIterator;
 
 import java.util.Iterator;
 import java.util.List;

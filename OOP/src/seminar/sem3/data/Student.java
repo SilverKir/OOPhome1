@@ -1,27 +1,21 @@
-package seminar.sem3;
+package seminar.sem3.data;
+
 import java.lang.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Student implements Comparable <Student> {
+public class Student extends User implements Comparable <Student>  {
    private static AtomicInteger idCounter=new AtomicInteger(0);
     private Integer studentID;
-    private String firstName;
-    private String secondName;
-    private String lastName;
     private String groupNumber;
 
     public Student(String firstName, String secondName, String lastName) {
+        super(firstName, secondName, lastName);
         this.studentID = idCounter.addAndGet(1);
-        this.firstName = firstName;
-        this.secondName = secondName;
-        this.lastName = lastName;
     }
 
     public Student(String firstName, String secondName, String lastName, String groupNumber) {
+        super(firstName, secondName, lastName);
         this.studentID = idCounter.addAndGet(1);
-        this.firstName = firstName;
-        this.secondName = secondName;
-        this.lastName = lastName;
         this.groupNumber = groupNumber;
     }
 
@@ -31,30 +25,6 @@ public class Student implements Comparable <Student> {
 
     public void setStudentID(Integer studentID) {
         this.studentID = studentID;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getSecondName() {
-        return secondName;
-    }
-
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getGroupNumber() {
@@ -79,8 +49,8 @@ public class Student implements Comparable <Student> {
     public String toString() {
         return "Student{" +
                 "ID=" + studentID +
-                ", Студент: " +secondName +" "+  firstName +
-                " " + lastName +
+                ", Студент: " +super.getSecondName()+" "+  super.getFirstName() +
+                " " + super.getLastName() +
                 ", Группа: " + groupNumber  +
                 '}';
     }

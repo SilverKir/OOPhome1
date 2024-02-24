@@ -1,4 +1,6 @@
-package seminar.sem3;
+package seminar.sem3.data;
+
+import seminar.sem3.service.StudyGroupIterator;
 
 import java.util.ArrayList;
 import java.util.Iterator;

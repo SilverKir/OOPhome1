@@ -1,7 +1,9 @@
-package seminar.sem3;
+package seminar.sem3.service;
+
+import seminar.sem3.data.Student;
+import seminar.sem3.data.StudyGroup;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -36,7 +38,7 @@ public class StudentGroupService {
     public List<Student> getSortedStudentGroupByFIO() {
 
         List<Student> studentList = studyGroup.studentList;
-       studentList.sort(new StudentComparator());
+       studentList.sort(new UserComparator<Student>());
         return studentList;
     }
 }
