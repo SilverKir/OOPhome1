@@ -21,7 +21,7 @@ public class StudyGroup implements Iterable<Student>, Comparable<StudyGroup> {
         StudyGroupIterator iterator = new StudyGroupIterator(this.studentList);
         while (iterator.hasNext()) {
             Student student = iterator.next();
-            if (student.getGroupNumber() == null || student.getGroupNumber().equals(groupName)) {
+            if (student.getGroupNumber() == null || !student.getGroupNumber().equals(groupName)) {
                 student.setGroupNumber(groupName);
             }
         }

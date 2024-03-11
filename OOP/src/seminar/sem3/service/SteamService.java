@@ -22,11 +22,5 @@ public class SteamService {
         return result;
     }
 
-    public void soutSteamList(List<Steam> steamList){
-        for (Steam studyGroups : steamList) {
-            for (StudyGroup group : studyGroups) {
-                System.out.println("Group = " + group);
-            }
-        }
-    }
+
 }

@@ -1,21 +1,19 @@
 package seminar.sem3.data;
 
 import java.lang.*;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Student extends User implements Comparable <Student>  {
-   private static AtomicInteger idCounter=new AtomicInteger(0);
     private Integer studentID;
     private String groupNumber;
 
-    public Student(String firstName, String secondName, String lastName) {
+    public Student(Integer studentID, String firstName, String secondName, String lastName) {
         super(firstName, secondName, lastName);
-        this.studentID = idCounter.addAndGet(1);
+        this.studentID = studentID;
     }
 
-    public Student(String firstName, String secondName, String lastName, String groupNumber) {
+    public Student(Integer studentID, String firstName, String secondName, String lastName, String groupNumber) {
         super(firstName, secondName, lastName);
-        this.studentID = idCounter.addAndGet(1);
+        this.studentID = studentID;
         this.groupNumber = groupNumber;
     }
 
@@ -23,9 +21,6 @@ public class Student extends User implements Comparable <Student>  {
         return studentID;
     }
 
-    public void setStudentID(Integer studentID) {
-        this.studentID = studentID;
-    }
 
     public String getGroupNumber() {
         return groupNumber;
